@@ -1,7 +1,83 @@
+html,
+body
+  padding: 0
+  margin: 0
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+
+a
+  color: inherit
+  text-decoration: none
+
+*
+  box-sizing: border-box
+
+/* Containers */
+.page
+  display: block
+  width: 100%
+
+.container
+  display: block
+  width: 100%
+  max-width: 1024px
+  margin-left: auto
+  margin-right: auto
+
+/* Site Header */
+
+.site-header
+  display: block
+  width: 100%
+
+.branding
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  align-items: center
+  align-content: stretch
+  flex: 0 1 auto
+  
 .logo
   line-height: 0
+  margin-right: 20px
   
 .social-link
   display: inline-block
   width: 100%
   text-align: center
+
+.nav
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  align-items: center
+  align-content: stretch
+
+.menu
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-end
+  align-items: stretch
+  align-content: stretch
+  flex: 1 0 auto
+  height: 100%
+  //outline: 1px solid blue
+
+  a
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: stretch
+    align-content: stretch
+    font-family: 'IBM Plex Mono', monospace
+    text-transform: uppercase
+    font-size: 14px
+    letter-spacing: 0.5px
+    padding: 0 12px
+    margin: 0 2px
+
+    &.feature-link
+      background-color: #00c87d
+      padding: 0 20px
+      margin: 10px 0 10px 30px
+      border-radius: 12px

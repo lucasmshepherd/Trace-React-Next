@@ -18,8 +18,8 @@ export default function SocialLink(props) {
   else { url == "#" }
 
   const linkStyle = {
-      maxWidth: area,
-      maxHeight: area,
+      width: area,
+      height: area,
       lineHeight: area,
       fontSize: icon,
       color: color,

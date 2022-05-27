@@ -5,16 +5,23 @@ export default function Branding(props) {
   return (
 
     <div className="branding">
+      <style>{`
+        .logo img {
+          width: ${props.logoWidth + "px"};
+          height: auto;
+        }
+      `}</style>
       <style jsx>{`
         .logo { 
           display: inline-block;
-          width: 100%;
-          max-width: ${props.logoWidth + "px"}; 
+        }
+        .logo img {
+          width: ${props.logoWidth + "px"}; 
           height: auto;
         }
       `}</style>
       <a href="/" className="logo">
-        <Image layout="intrinsic" src={Logo} />
+        <Image layout="fixed" src={Logo} />
       </a>
       {props.children}
     </div>
