@@ -1,11 +1,11 @@
 export default function navLink(props) {
   const url = props.url
   const title = props.title
-  let disabled
-  if( props.disabled ) { disabled = "feature-link disabled" }
+  let featured
+  if( props.featured ) { featured = "feature-link disabled" }
   return (
     <>
-      <a href={url} className={disabled}>
+      <a href={url} className={featured}>
         {title}
       </a>
     </>

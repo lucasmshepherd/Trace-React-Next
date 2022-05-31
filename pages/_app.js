@@ -1,12 +1,12 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
-library.add(fas, faTwitter, faDiscord)
 import '@fortawesome/fontawesome-svg-core/styles.css'
-library.autoAddCss = false
-
 import '../styles/global.sass'
-import Layout from '../components/template/layout'
+import Layout from '../components/_template/layout'
+
+library.add(fas, faTwitter, faDiscord)
+library.autoAddCss = false
 
 function TraceApp({ Component, pageProps }) {
   return (

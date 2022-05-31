@@ -1,3 +1,4 @@
+/* Reset */
 html,
 body
   padding: 0
@@ -11,6 +12,122 @@ a
 *
   box-sizing: border-box
 
+
+/**** Theme Fonts and Colors ****/
+
+/* Fonts */
+@font-face
+  font-family: 'Nimbneue'
+  font-style: normal
+  font-weight: 400
+  src: local(''), url('../assets/fonts/NimbusSan-Reg.woff2') format('woff2'), url('../assets/fonts/NimbusSan-Reg.woff') format('woff')
+
+@font-face
+  font-family: 'Nimbneue'
+  font-style: italic
+  font-weight: 400
+  src: local(''), url('../assets/fonts/NimbusSan-RegIta.woff2') format('woff2'), url('../assets/fonts/NimbusSan-RegIta.woff') format('woff')
+
+@font-face
+  font-family: 'Alfarn'
+  font-style: normal
+  font-weight: 400
+  src: local(''), url('../assets/fonts/Alfarn.woff2') format('woff2'), url('../assets/fonts/Alfarn.woff') format('woff')
+
+@font-face
+  font-family: 'Alfarn'
+  font-style: normal
+  font-weight: 700
+  src: local(''), url('../assets/fonts/Alfarn.woff2') format('woff2'), url('../assets/fonts/Alfarn.woff') format('woff')
+
+%font-style-2
+  font-family: 'IBM Plex Mono', monospace
+  text-transform: uppercase
+  font-size: 14px
+  letter-spacing: 0.5px
+
+body
+  font-family: Nimbneue
+  font-weight: normal
+  font-size: 22px
+  line-height: 1.5em
+
+h1,h2,h3,h4,h5,h6
+  font-family: Alfarn
+  font-weight: bold
+
+h1,h2,h3,h4,h5,h6
+  font-size: 42px
+  text-transform: uppercase
+  margin-top: .6em
+  margin-bottom: .5em
+  line-height: 48px
+  letter-spacing: 1px
+
+.menu a,
+.site-footer,
+.pretitle
+  @extend %font-style-2
+
+/* Colors */
+body
+  color: #515151
+  background: #f4f4f4
+
+.site-header, 
+.site-footer
+  background-color: white
+
+.menu 
+  a
+    &.feature-link
+      background-color: #00c87d
+
+.pretitle
+  border-bottom: 2px solid #c0c0c0
+
+
+/**** Pages and Components ****/
+
+/* Framework */
+.align-center
+  text-align: center
+
+[class*="flex-row"] .container
+  display: flex
+  flex-direction: row
+
+[class*="flex-col"]
+  display: flex
+  flex-direction: column
+
+[class*="row-fill"] .container
+  justify-content: flex-start
+  align-items: stretch
+  align-content: stretch
+
+[class*="col-center"]
+  justify-content: center
+  align-items: center
+  align-content: center
+
+[class*="col-end-center"]
+  justify-content: end
+  align-items: center
+  align-content: center
+
+[class*="-50-50"] .container > *
+  flex: 1 1 50%
+
+.section-basic
+  display: block
+  width: 100%
+  .container > *
+    padding-top: 66px
+    padding-bottom: 66px
+    padding-left: 30px
+    padding-right: 50px
+
 /* Containers */
 .page
   display: block
@@ -18,15 +135,25 @@ a
 
 .container
   display: block
+  position: relative
   width: 100%
-  max-width: 1024px
+  max-width: 1200px
   margin-left: auto
   margin-right: auto
+  padding-left: 30px
+  padding-left: 30px
+
+main
+  display: block
+  width: 100%
 
 /* Site Header */
-
 .site-header
   display: block
+  position: fixed
+  z-index: 9999
+  top: 0
+  left: 0
   width: 100%
 
 .branding
@@ -61,7 +188,6 @@ a
   align-content: stretch
   flex: 1 0 auto
   height: 100%
-  //outline: 1px solid blue
 
   a
     display: flex
@@ -69,15 +195,56 @@ a
     justify-content: center
     align-items: stretch
     align-content: stretch
-    font-family: 'IBM Plex Mono', monospace
-    text-transform: uppercase
-    font-size: 14px
-    letter-spacing: 0.5px
     padding: 0 12px
     margin: 0 2px
+    transition: background-color 0.5s
 
     &.feature-link
-      background-color: #00c87d
       padding: 0 20px
       margin: 10px 0 10px 30px
-      border-radius: 12px
+      border-radius: 10px
+
+    &.disabled
+      cursor: default
+      pointer-events: none
+      user-select: none
+
+    &:hover,
+    &:active
+      background-color: #eee
+
+/* Sections and Blocks */
+.pretitle
+  display: block
+  width: 100%
+  padding-bottom: 8px
+  margin-top: -6px
+
+.gallery-items
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-items: stretch
+  align-content: stretch
+
+.cyber-arm
+  position: absolute
+  right: 100%
+  bottom: 0
+  padding: 0!important
+  flex: 0 1 auto!important
+  display: flex
+  flex-flow: column nowrap
+  justify-content: flex-end
+  align-items: flex-end
+  align-content: stretch
+  *
+    line-height: 0
+
+
+/* Site Footer */
+.site-footer
+  display: block
+  width: 100%
+  padding: 26px 10px
+  text-align: center

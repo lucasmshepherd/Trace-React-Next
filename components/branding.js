@@ -15,10 +15,6 @@ export default function Branding(props) {
         .logo { 
           display: inline-block;
         }
-        .logo img {
-          width: ${props.logoWidth + "px"}; 
-          height: auto;
-        }
       `}</style>
       <a href="/" className="logo">
         <Image layout="fixed" src={Logo} />

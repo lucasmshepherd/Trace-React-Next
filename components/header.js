@@ -10,10 +10,13 @@ export default function Header(props) {
     height: navHeight,
   }
   return (
-    <div>
+    <> 
+      <style>{`
+        body { padding-top: ${navHeight}; }
+      `}</style>
       <header className="site-header">
         <Container>
-          <div class="nav" style={navStyle}>
+          <div className="nav" style={navStyle}>
             <Branding logoWidth="100">
               <SocialLink profile="Twitter" icon="20" area="42" />
               <SocialLink profile="Discord" icon="20" area="42" />
@@ -25,11 +28,11 @@ export default function Header(props) {
               <Link title="Mission" url="/mission" />
               <Link title="Team" url="/team" />
               <Link title="FAQ" url="/faq" />
-              <Link title="Minting Soon" disabled />
+              <Link title="Minting Soon" featured />
             </NavMenu>
           </div>
         </Container>
       </header>
-    </div>
+    </>
   )
 }

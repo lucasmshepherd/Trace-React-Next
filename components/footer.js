@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <>
-      Footer
-    </>
+    <footer className="site-footer">
+      © 2021 Hex Code Crew, LLC.
+    </footer>
   )
 }
