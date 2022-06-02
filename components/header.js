@@ -22,12 +22,12 @@ export default function Header(props) {
               <SocialLink profile="Discord" icon="20" area="42" />
             </Branding>
             <NavMenu>
-              <Link title="About" url="/about" />
-              <Link title="Art" url="/art" />
-              <Link title="World" url="/world" />
-              <Link title="Mission" url="/mission" />
-              <Link title="Team" url="/team" />
-              <Link title="FAQ" url="/faq" />
+              <Link title="About" url="#about" />
+              <Link title="Art" url="#art" />
+              <Link title="World" url="#world" />
+              <Link title="Mission" url="#mission" />
+              <Link title="Team" url="#team" />
+              <Link title="FAQ" url="#faq" />
               <Link title="Minting Soon" featured />
             </NavMenu>
           </div>

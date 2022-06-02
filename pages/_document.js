@@ -7,7 +7,8 @@ export default function Document() {
       <Head>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap" rel="stylesheet" />
       </Head>
-      <body className="theme-light">
+      <body className="theme-light" >
+        <a className="block-anchor" name="top"></a>
         <Main />
         <NextScript />
       </body>

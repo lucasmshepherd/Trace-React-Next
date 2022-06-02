@@ -16,8 +16,8 @@ export default function Branding(props) {
           display: inline-block;
         }
       `}</style>
-      <a href="/" className="logo">
-        <Image layout="fixed" src={Logo} />
+      <a href="#top" className="logo">
+        <Image layout="fixed" src={Logo} priority="true" />
       </a>
       {props.children}
     </div>

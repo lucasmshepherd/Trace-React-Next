@@ -52,22 +52,46 @@ body
   font-size: 22px
   line-height: 1.5em
 
-h1,h2,h3,h4,h5,h6
+h1,h2,h3,h4,h6
   font-family: Alfarn
   font-weight: bold
 
 h1,h2,h3,h4,h5,h6
-  font-size: 42px
+  display: block
+  width: 100%
   text-transform: uppercase
   margin-top: .6em
-  margin-bottom: .5em
-  line-height: 48px
+  line-height: 1em
+
+h1,h2,h3
+  font-size: 42px
   letter-spacing: 1px
+  margin-bottom: .5em
+  
+h4,h5
+  font-family: 'IBM Plex Mono', monospace
+  font-size: 20px
+  letter-spacing: 1.5px
+  margin-bottom: .8em
+  margin-top: 0
+
+h6
+  @extend %font-style-2
+
+
+h1,h2,h3,h4,h5
+  &.h5
+    @extend h5
+
 
 .menu a,
 .site-footer,
 .pretitle
   @extend %font-style-2
+
+.blocklist-item
+  font-size: 20px
+  line-height: 1.3em
 
 /* Colors */
 body
@@ -76,7 +100,7 @@ body
 
 .site-header, 
 .site-footer
-  background-color: white
+  background-color: #f4f4f4
 
 .menu 
   a
@@ -86,8 +110,53 @@ body
 .pretitle
   border-bottom: 2px solid #c0c0c0
 
+.light
+  color: #c8c8c8
+  border-color: #525252
+
+hr.divider
+  border: 1px solid #c0c0c0
+  margin-bottom: 20px
+
+.blocklist-wide-item
+  border-top: 2px solid #c0c0c0
+
+.faq
+  .faq-item
+    &:first-child
+      h1,h2,h3,h4,h5,h6
+          border-top: 0
+    h1,h2,h3,h4,h5,h6
+      border-bottom: 1px solid #c0c0c0
+      border-top: 1px solid #c0c0c0
+
+.faq-item
+  h1,h2,h3,h4,h5,h6
+    &:hover, &:active
+      background: #f4f4f4
+  svg
+    color: #c0cad2
 
 /**** Pages and Components ****/
+
+html
+  scroll-behavior: smooth
+  scroll-padding-top: 66px
+
+p
+  margin-top: 24px
+  margin-bottom: 40px
+
+  & ~ h1,
+  & ~ h2,
+  & ~ h3,
+  & ~ h4,
+  & ~ h5,
+  & ~ h6
+    margin-top: 60px
+
+  &.skinny
+    max-width: 80%
 
 /* Framework */
 .align-center
@@ -119,14 +188,17 @@ body
 [class*="-50-50"] .container > *
   flex: 1 1 50%
 
-.section-basic
-  display: block
-  width: 100%
-  .container > *
-    padding-top: 66px
-    padding-bottom: 66px
+  &:nth-child(2n+1)
+    padding-right: 30px
+
+  &:nth-child(2n+2)
     padding-left: 30px
-    padding-right: 50px
+
+.no-top-padding
+  padding-top: 0!important
+
+.no-bottom-padding
+  padding-bottom: 0!important
 
 /* Containers */
 .page
@@ -141,7 +213,12 @@ body
   margin-left: auto
   margin-right: auto
   padding-left: 30px
-  padding-left: 30px
+  padding-right: 30px
+
+section
+  display: block
+  width: 100%
+  position: relative
 
 main
   display: block
@@ -220,17 +297,26 @@ main
   padding-bottom: 8px
   margin-top: -6px
 
+  #blocklister &
+    border-bottom: 0
+    margin-bottom: -24px
+    padding-bottom: 0
+
 .gallery-items
   display: flex
   flex-flow: row wrap
-  justify-content: flex-start
+  justify-content: flex-start 
   align-items: stretch
   align-content: stretch
 
-.cyber-arm
+  #art &
+    justify-content: center
+
+.cyber-arm,
+.skull-wyrm
   position: absolute
   right: 100%
-  bottom: 0
+  bottom: -66px
   padding: 0!important
   flex: 0 1 auto!important
   display: flex
@@ -238,9 +324,183 @@ main
   justify-content: flex-end
   align-items: flex-end
   align-content: stretch
+
   *
     line-height: 0
 
+.floating-city
+  position: absolute
+  left: 75vw
+  bottom: 8vw
+  width: 100%
+  max-width: 612px
+  z-index: 10
+  animation: floater 14s infinite ease-in-out
+
+@keyframes floater
+  0%
+    margin-bottom: 0
+  20%
+    margin-bottom: 20px
+  22%
+    margin-bottom: 20px
+  40%
+    margin-bottom: -15px
+  60%
+    margin-bottom: 10px
+  62%
+    margin-bottom: 10px
+  80%
+    margin-bottom: -10px
+  100%
+    margin-bottom: 0
+
+.static-planet
+  position: absolute
+  left: 85vw
+  bottom: -5vw
+  width: 100%
+  max-width: 483px
+  z-index: 1
+
+.block-anchor
+  display: block
+  position: absolute
+  left: 0
+  top: 0
+
+.section-basic
+  display: block
+  width: 100%
+  padding-top: 66px
+  padding-bottom: 66px
+  padding-left: 30px
+  padding-right: 30px
+
+  .section-basic
+    padding: 0
+
+.blocklist
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-items: stretch
+  align-content: stretch
+  padding-right: 0!important
+  margin-bottom: 66px
+
+  #world &
+    flex-flow: column nowrap
+    padding: 0!important
+
+  .blocklist-item
+    flex: 1 1 50%
+    margin: 25px 0
+    padding: 0 35px
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    align-content: stretch
+    #world &
+      padding: 0!important
+
+    &:nth-child(2n+1)
+      padding-left: 0
+
+    &:nth-child(2n+2)
+      padding-right: 0
+    
+    & > span
+      flex: 1 0 148px
+      border-radius: 999px
+
+  .blocklist-item-content
+    padding-left: 24px
+
+.blocklist-wide
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-items: stretch
+  align-content: stretch
+
+  .section-image
+    min-width: 346px
+
+  .section-blurb
+    padding-left: 20px
+
+  .blocklist-wide-item
+    flex: 1 1 100%
+    padding-top: 30px
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    align-content: stretch
+
+#blocklister
+  padding-bottom: 0!important
+  h3 ~ p
+    margin-top: 0
+  .section-blurb
+    p:last-child
+      margin-bottom: 0
+
+#faq1.no-top-padding
+  h3.h2
+    padding-top: 0
+    margin-top: 0
+
+.faq
+  margin-top: 40px
+
+.faq-item
+  position: relative
+
+  h1,h2,h3,h4,h5,h6
+    padding: 20px 5px
+    cursor: pointer
+    transition: background-color 0.5s
+  
+  .container
+    padding-left: 0
+    padding-right: 0
+    padding-top: 20px
+    margin-bottom: 40px
+  
+  .section-image
+    min-width: 300px
+
+  .section-blurb
+    padding-left: 40px
+    
+  .content-block
+    height: 0
+    overflow: hidden
+    padding: 0 40px
+
+  &.openme
+    h1,h2,h3,h4,h5,h6
+      //background: #f1f1f1!important
+    
+    .content-block
+      height: auto
+  
+  svg
+    position: absolute
+    top: 20px
+    left: -20px
+    font-size: 20px
+    line-height: 20px
+    color: #c0cad2
+  
+  &.openme svg
+    transform: rotate(90deg)
+
+.planets
+  min-height: 700px
 
 /* Site Footer */
 .site-footer
