@@ -6,7 +6,7 @@ import CyberArm from '../assets/images/cyber-arm.png'
 import SkullWyrm from '../assets/images/Skull-Wyrm.png'
 import Harpoon from '../assets/images/harpoon.png'
 import DragonFrog from '../assets/images/dragon-frog.png'
-import FloatingCity from '../assets/images/floatingcity.webp'
+import FloatingCityPng from '../assets/images/floatingcitypng.png'
 import StaticPlanet from '../assets/images/Planet6.png'
 
 export default function Block(props) {
@@ -38,14 +38,15 @@ export default function Block(props) {
           </div>
   }
   if(props.city) {
-    city =  <div>
-              <div className="floating-city">
-                <Image src={FloatingCity} layout="intrinsic" />
-              </div>
+    city =  <>
+              <picture className="floating-city">
+                <source srcSet={process.env.PUBLIC_URL + '/images/floatingcity.webp'} type="image/webp" />
+                <img src={FloatingCityPng.src} alt="logo" />
+              </picture>
               <div className="static-planet">
-                <Image src={StaticPlanet} layout="intrinsic" className="static-planet" />
+                <Image src={StaticPlanet} layout="intrinsic" />
               </div>
-            </div>
+            </>
   }
   if(props.darken) { bg = { backgroundColor: "#ebebeb" } }
   if(props.dark) { bg = { backgroundColor: "#0d1012", color: "#fff" } }

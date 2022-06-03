@@ -264,13 +264,13 @@ export default function Home() {
         <Title tag="h3" size="h2" color="#16c1c0">
           Rhoncus sapien dictum ac
         </Title>
-        <p class="light">
+        <p className="light">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis risus non augue varius semper eu a eros.
           Mauris ut enim ut nisi imperdiet ornare a et nunc. Quisque sed purus varius nisi imperdiet pulvinar vitae et
           mauris. Cras malesuada mattis risus, ac molestie ante consectetur ac. Sed molestie efficitur laoreet. Fusce
           vehicula faucibus scelerisque. Ut ullamcorper magna porttitor, pharetra lorem non, mollis leo.
         </p>
-        <p class="light">
+        <p className="light">
           Quisque sit amet arcu non lectus accumsan suscipit ut in erat. Duis id interdum odio, vitae pharetra velit.
           Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam dapibus augue sit
           amet velit tincidunt pellentesque. Phasellus ultricies aliquet auctor. Mauris tortor est, suscipit ac eleifend id,
@@ -279,7 +279,7 @@ export default function Home() {
         <Title tag="h3" size="h2" color="#16c1c0">
           Imperdiet ornare
         </Title>
-        <p class="light skinny">
+        <p className="light skinny">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis risus non augue varius semper eu a eros.
           Mauris ut enim ut nisi imperdiet ornare a et nunc. Quisque sed purus varius nisi imperdiet pulvinar vitae et
           mauris. Cras malesuada mattis risus, ac molestie ante consectetur ac. Sed molestie efficitur laoreet. Fusce
