@@ -40,7 +40,7 @@ export default function Block(props) {
   if(props.city) {
     city =  <>
               <picture className="floating-city">
-                <source srcSet={process.env.PUBLIC_URL + '/images/floatingcity.webp'} type="image/webp" />
+                <source srcSet="/images/floatingcity.webp" type="image/webp" />
                 <img src={FloatingCityPng.src} alt="logo" />
               </picture>
               <div className="static-planet">
