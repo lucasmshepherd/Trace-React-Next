@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CyberArm from '../assets/images/cyber-arm.png'
 import SkullWyrm from '../assets/images/Skull-Wyrm.png'
+import Harpoon from '../assets/images/harpoon.png'
+import DragonFrog from '../assets/images/dragon-frog.png'
 import FloatingCity from '../assets/images/floatingcity.webp'
 import StaticPlanet from '../assets/images/Planet6.png'
 
@@ -25,6 +27,16 @@ export default function Block(props) {
             <Image src={SkullWyrm} layout="fixed" width="217" height="371" />
           </div>
   }
+  if(props.harpoon) {
+    arm = <div className="harpoon">
+            <Image src={Harpoon} layout="fixed" width="254" height="338" />
+          </div>
+  }
+  if(props.drog) {
+    arm = <div className="dragon-frog">
+            <Image src={DragonFrog} layout="fixed" width="956" height="348" />
+          </div>
+  }
   if(props.city) {
     city =  <div>
               <div className="floating-city">
@@ -36,7 +48,7 @@ export default function Block(props) {
             </div>
   }
   if(props.darken) { bg = { backgroundColor: "#ebebeb" } }
-  if(props.dark) { bg = { backgroundColor: "#0d1012" } }
+  if(props.dark) { bg = { backgroundColor: "#0d1012", color: "#fff" } }
   if(props.buzzcut) { 
     pad = "no-top-padding"
   }
@@ -185,6 +197,16 @@ export function Planets(props) {
   return (
     <>
       <div className="planets">
+        {props.children}
+      </div>
+    </>
+  )
+}
+
+export function Planet(props) {
+  return (
+    <>
+      <div className="planet-item">
         {props.children}
       </div>
     </>

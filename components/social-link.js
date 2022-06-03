@@ -6,12 +6,12 @@ export default function SocialLink(props) {
   const area = props.area + "px"
   let url, classes, color
   if (profile == "Twitter") {
-    url = "#t"
+    url = "https://twitter.com/starnomadsnft"
     classes = "fa-brands fa-twitter";
     color = "#2a9bf0"
   }
   else if (profile == "Discord") {
-    url = "#d";
+    url = "https://t.co/fScBbBBh3S";
     classes = "fa-brands fa-discord";
     color= "#6671f5"
   }
@@ -27,7 +27,7 @@ export default function SocialLink(props) {
 
   return (
     <>
-      <a href={url} className="social-link" style={linkStyle}>
+      <a href={url} target="_blank" className="social-link" style={linkStyle} title={profile}>
         <FontAwesomeIcon icon={classes} />
       </a>
     </>
