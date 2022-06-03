@@ -223,7 +223,7 @@ export default function Home() {
                   <Image src={Placeholder} layout="intrinsic" width="300" height="300" />
                 </div>
                 <div className="section-blurb">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.</p>
                 </div>
               </Block>
             </FaqItem>
@@ -237,7 +237,7 @@ export default function Home() {
                   <Image src={Placeholder} layout="intrinsic" width="300" height="300" />
                 </div>
                 <div className="section-blurb">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.</p>
                 </div>
               </Block>
             </FaqItem>
@@ -251,7 +251,7 @@ export default function Home() {
                   <Image src={Placeholder} layout="intrinsic" width="300" height="300" />
                 </div>
                 <div className="section-blurb">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.</p>
                 </div>
               </Block>
             </FaqItem>
@@ -430,7 +430,7 @@ export default function Home() {
                   <Image src={Placeholder} layout="intrinsic" width="300" height="300" />
                 </div>
                 <div className="section-blurb">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.</p>
                 </div>
               </Block>
             </FaqItem>
@@ -444,7 +444,7 @@ export default function Home() {
                   <Image src={Placeholder} layout="intrinsic" width="300" height="300" />
                 </div>
                 <div className="section-blurb">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.</p>
                 </div>
               </Block>
             </FaqItem>
@@ -458,7 +458,7 @@ export default function Home() {
                   <Image src={Placeholder} layout="intrinsic" width="300" height="300" />
                 </div>
                 <div className="section-blurb">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.</p>
                 </div>
               </Block>
             </FaqItem>
@@ -472,7 +472,7 @@ export default function Home() {
                   <Image src={Placeholder} layout="intrinsic" width="300" height="300" />
                 </div>
                 <div className="section-blurb">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.</p>
                 </div>
               </Block>
             </FaqItem>
@@ -486,7 +486,7 @@ export default function Home() {
                   <Image src={Placeholder} layout="intrinsic" width="300" height="300" />
                 </div>
                 <div className="section-blurb">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel semper augue. Sed porta commodo gravida. Donec non sem a justo euismod dapibus sed non urna. Praesent euismod ipsum lorem, a rhoncus sapien dictum ac. Cras a aliquet lorem.</p>
                 </div>
               </Block>
             </FaqItem>

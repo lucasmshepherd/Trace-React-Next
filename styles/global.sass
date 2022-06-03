@@ -114,6 +114,9 @@ body
 
 .menu 
   a
+    &:not(.feature-link)
+      @media(max-width: 820px)
+        display: none
     &.feature-link
       background-color: #00c87d
 
@@ -181,6 +184,8 @@ p
 
   &.skinny
     max-width: 80%
+    @media(max-width: 1480px)
+      max-width: 100%
 
 /* Framework */
 .align-center
@@ -189,6 +194,8 @@ p
 [class*="flex-row"] .container
   display: flex
   flex-direction: row
+  @media(max-width: 1184px)
+    flex-wrap: wrap
 
 [class*="flex-col"]
   display: flex
@@ -211,6 +218,9 @@ p
 
 [class*="-50-50"] .container > *
   flex: 1 1 50%
+
+  @media(max-width: 1184px)
+    flex: 1 0 100%
 
   &:nth-child(2n+1)
     padding-right: 30px
@@ -239,10 +249,19 @@ p
   padding-left: 30px
   padding-right: 30px
 
+  .container
+    padding-left: 0!important
+    padding-right: 0!important
+
 section
   display: block
   width: 100%
   position: relative
+
+.section-blurb,
+.section-image
+  @media(max-width: 1184px)
+    padding: 0!important
 
 main
   display: block
@@ -256,6 +275,12 @@ main
   top: 0
   left: 0
   width: 100%
+  @media(max-width: 820px)
+    top: 24px
+
+  .container
+    @media(max-width: 820px)
+      padding: 0 15px
 
 .branding
   display: flex
@@ -264,10 +289,17 @@ main
   align-items: center
   align-content: stretch
   flex: 0 1 auto
+
+  @media(max-width: 820px)
+    flex: 1 0 100%
   
 .logo
   line-height: 0
   margin-right: 20px
+  padding-top: 8px
+  
+  @media(max-width: 820px)
+    flex: 1 0 auto
   
 .social-link
   display: inline-block
@@ -300,10 +332,29 @@ main
     margin: 0 2px
     transition: background-color 0.5s
 
+    @media(max-width: 1184px)
+      font-size: 12px
+      margin: 0
+      padding: 0 10px
+
     &.feature-link
       padding: 0 20px
       margin: 10px 0 10px 30px
       border-radius: 10px
+
+      @media(max-width: 1184px)
+        margin-left: 18px
+
+      @media(max-width: 820px)
+        position: absolute
+        top: -24px
+        left: 0
+        margin: 0
+        border-radius: 0
+        width: 100%
+        text-align: center
+        padding: 0px 5px
+        line-height: 24px
 
     &.disabled
       cursor: default
@@ -334,7 +385,7 @@ main
   align-content: stretch
 
   & > *
-    flex: 1 0 50%w
+    flex: 1 0 50%
 
   #art &
     justify-content: center
@@ -358,6 +409,9 @@ main
     transform-origin: 0 100%
     transform: scale(.7)
       
+  @media(max-width: 820px)
+    transform: scale(.4)
+    right: -30%
 
   *
     line-height: 0
@@ -369,6 +423,12 @@ main
   width: 100%
   max-width: 956px
   z-index: 10
+  @media(max-width: 1184px)
+    left: 70%
+  @media(max-width: 820px)
+    left: 20%
+    top: auto
+    bottom: -350px
 
 .floating-city
   position: absolute
@@ -378,6 +438,17 @@ main
   max-width: 612px
   z-index: 10
   animation: floater 30s infinite ease-in-out
+  @media(max-width: 1480px)
+    left: 72vw
+    bottom: 10vw
+  @media(max-width: 1184px)
+    transform: scale(.6)
+    left: 60vw
+    bottom: 30vw
+  @media(max-width: 820px)
+    left: 50%
+    transform: translateX(-50%) scale(.6)
+    bottom: -60px
 
 @keyframes floater
   0%
@@ -397,13 +468,21 @@ main
   100%
     margin-bottom: 0
 
-.static-planet
+div.static-planet
   position: absolute
   left: 85vw
   bottom: -5vw
   width: 100%
   max-width: 483px
   z-index: 1
+  @media(max-width: 1184px)
+    transform: scale(.7)
+    left: 70vw
+    bottom: 15vh
+  @media(max-width: 820px)
+    left: 50%
+    transform: translateX(-50%) scale(.4)
+    bottom: -140px
 
 .block-anchor
   display: block
@@ -419,8 +498,30 @@ main
   padding-left: 30px
   padding-right: 30px
 
+  @media(max-width: 1184px)
+    padding-left: 0!important
+    padding-right: 0!important
+    .section-image
+      order: 2
+
   .section-basic
     padding: 0
+
+.banner
+  @media(max-width: 1184px)
+    .container
+      padding: 0
+      flex-flow: column nowrap
+      justify-content: flex-end
+      align-items: center
+    .banner-logo
+      width: 300px
+      margin-top: 40px
+  @media(max-width: 820px)
+    .banner-logo,
+    .banner-punk
+      padding: 0!important
+
 
 .blocklist
   display: flex
@@ -434,6 +535,9 @@ main
   #world &
     flex-flow: column nowrap
     padding: 0!important
+    @media(max-width: 1184px)
+      flex-wrap: wrap
+      flex-flow: row wrap
 
   .blocklist-item
     flex: 1 1 50%
@@ -444,6 +548,11 @@ main
     justify-content: flex-start
     align-items: center
     align-content: stretch
+    @media(max-width: 1184px)
+      flex: 1 0 100%
+      padding: 0!important
+    @media(max-width: 820px)
+      flex-flow: column nowrap
     .planets &
       flex: 0 1 auto
     #world &
@@ -456,7 +565,7 @@ main
       padding-right: 0
     
     & > span
-      flex: 1 0 148px
+      flex: 0 0 148px
       //border-radius: 999px
 
   .blocklist-item-content
@@ -464,10 +573,21 @@ main
     font-size: 16px
     line-height: 24px
 
+    @media(max-width: 1184px)
+      width: 100%
+      font-size: 20px
+      line-height: 28px
+
+    @media(max-width: 820px)
+      padding: 0
+      margin-top: 40px
+
 .planets
   position: relative
   z-index: 20
   text-shadow: 0 1px 2px rgba(0,0,0,.8)
+  @media(max-width: 820px)
+    padding-bottom: 300px
   .divider
     position: relative
     overflow: visible
@@ -480,15 +600,31 @@ main
       height: 2px
       left: -150px
       top: 0px
+    @media(max-width: 820px)
+      &:before
+        display: none
   .blocklist
     margin-left: -15%
     width: 100%
     justify-content: center
     margin-bottom: 0
+    @media(max-width: 1480px)
+      margin-left: 20px
+      width: 70%
+      justify-content: flex-start
+    @media(max-width: 820px)
+      width: 100%
+      margin-left: 0
     .blocklist-item
       font-size: 14px
+      @media(max-width: 1480px)
+        flex: 1 0 100%!important
+        margin: 0 0 50px 0!important
+        padding: 0!important
       & > span
         z-index: 5
+        @media(max-width: 820px)
+          flex: 0 1 auto!important
       &:nth-child(5n+1)
         & > span
           flex: 1 0 214px
@@ -511,6 +647,10 @@ main
         & > span
           flex: 1 0 196px
         flex: 0 1 50%
+    img
+      @media(max-width: 820px)
+        transform: scale(.8)
+
   .blocklist-item-content
     font-size: 13px
     line-height: 20px
@@ -521,6 +661,9 @@ main
   justify-content: flex-start
   align-items: stretch
   align-content: stretch
+
+  @media(max-width: 820px)
+    flex-flow: column nowrap
 
   .section-image
     min-width: 346px
@@ -536,6 +679,9 @@ main
     justify-content: flex-start
     align-items: center
     align-content: stretch
+
+    @media(max-width: 820px)
+      flex-flow: column nowrap
 
 #blocklister
   padding-bottom: 0!important
@@ -555,6 +701,12 @@ main
 
   #faq &
     max-width: 74%
+    @media(max-width: 820px)
+      max-width: 100%
+
+#faq
+  @media(max-width: 820px)
+    padding-bottom: 300px
 
 .faq-item
   position: relative
@@ -611,6 +763,11 @@ main
     flex: 1 0 25%
     padding: 0 25px
 
+    @media(max-width: 820px)
+      flex: 1 0 100%
+      padding: 0 0 50px
+      text-align: center
+
 .no-pro-item-excerpt
   font-size: 16px  
   line-height: 22px
@@ -630,8 +787,6 @@ main
   justify-content: center
   align-items: center
   align-content: stretch
-
-
 
 /* Site Footer */
 .site-footer
